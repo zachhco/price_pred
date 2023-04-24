@@ -1,15 +1,19 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "./index.py",
-            "use": "@vercel/python"
-        }
-    ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/"
-        }
-    ]
-}
+      {
+        "src": "/(.*)",
+        "dest": "/index.py$1",
+        "methods": ["GET", "POST"]
+      }
+    ],
+    "env": {
+      "FLASK_APP": "index.py",
+      "FLASK_ENV": "production"
+    },
+    "build": {
+      "env": {
+        "PIP_TARGET": "/vercel/path0",
+        "PYTHONUNBUFFERED": "1"
+      }
+    }
+  }
