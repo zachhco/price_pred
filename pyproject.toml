@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "sklearn"
+version = "0.1.0"
+description = "maths"
+authors = ["zachhco <zrocohen@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Flask = "^2.2.3"
+Everything-Tkinter = "^0.2"
+pandas = "^2.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
